@@ -34,7 +34,7 @@ const countTotalFeedback = () => {
   return good + bad + neutral;
 };
 
-const countPositiceFeedbacks = () => {
+const countPositiveFeedbacks = () => {
   const total = countTotalFeedback();
   return total === 0 ? 0 : Math.round((good / total) * 100);
 }
@@ -57,7 +57,7 @@ const countPositiceFeedbacks = () => {
               neutral={neutral}
               bad={bad}
               total={countTotalFeedback()}
-              positivePercentage={countPositiceFeedbacks()}
+              positivePercentage={countPositiveFeedbacks()}
             />
           )}
         </Section>
